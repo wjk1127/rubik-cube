@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>三阶魔方</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="cube-canvas"></canvas>
+
+    <div id="ui-top">
+      <div id="timer" class="ui-panel">00:00</div>
+      <div id="move-count" class="ui-panel">步数: 0</div>
+    </div>
+
+    <div id="ui-bottom">
+      <button id="btn-scramble" class="btn">打乱</button>
+      <button id="btn-pause" class="btn">暂停</button>
+      <button id="btn-solve" class="btn">复原</button>
+      <button id="btn-reset" class="btn">重置</button>
+    </div>
+
+    <div id="hint-bar">🖱️ 拖拽旋转视角 | 点击面旋转 | Shift+点击 逆转 | 空格打乱</div>
+
+    <div id="ui-left">
+      <button id="btn-theme" class="btn-icon" title="切换主题">🌓</button>
+      <button id="btn-sound" class="btn-icon" title="音效开关">🔊</button>
+    </div>
+
+    <div id="overlay" class="overlay hidden">
+      <div class="overlay-content">
+        <h2 id="overlay-title"></h2>
+        <p id="overlay-message"></p>
+        <button id="overlay-btn" class="btn btn-primary"></button>
+      </div>
+    </div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
